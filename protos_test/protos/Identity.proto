@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Responses/AuthResponse.proto";
+import "Responses/UserResponse.proto";
+import "Requests/UserLoginRequest.proto";
+import "Requests/UserRegisterRequest.proto";
+import "Requests/RefreshTokenRequest.proto";
+import "Requests/GetUserRequest.proto";
+
+option csharp_namespace = "Protos";
+
+service Identity {
+	rpc LoginUser (UserLoginRequest) returns (AuthResponse);
+	rpc RegisterUser (UserRegisterRequest) returns (AuthResponse);
+	rpc RefreshToken (RefreshTokenRequest) returns (AuthResponse);
+	rpc GetUser (GetUserRequest) returns (UserResponse);
+}

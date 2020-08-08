@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "Responses/UserResponse.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Protos";
+
+message BrandResponse {
+	string id = 1;
+	string name = 2;
+	bool isPublic = 3;
+	string createdBy = 4;
+	UserResponse userResponse = 5;
+	google.protobuf.Timestamp createdAt = 6;
+}

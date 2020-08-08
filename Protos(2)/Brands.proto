@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Protos/Responses/BrandResponse.proto";
+import "Protos/Requests/BrandRequest.proto";
+import "Protos/Requests/BrandCreateRequest.proto";
+import "Protos/Requests/BrandUpdateRequest.proto";
+import "Protos/Queries/GetManyQueries/GetManyBrandsQuery.proto";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Protos";
+
+service Brand {
+	rpc GetManyBrands (GetManyBrandsQuery) returns (stream BrandResponse);
+	rpc GetOneBrand (BrandRequest) returns (BrandResponse);
+	rpc CreateBrand (BrandCreateRequest) returns (BrandResponse);
+	rpc UpdateBrand (BrandUpdateRequest) returns (BrandResponse);
+	rpc DeleteBrand (BrandRequest) returns (google.protobuf.Empty);
+}

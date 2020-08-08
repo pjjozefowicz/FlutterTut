@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "Protos/Queries/GetOneQueries/GetOneBrandQuery.proto";
+
+option csharp_namespace = "Protos";
+
+message BrandRequest {
+	string BrandId = 1;
+	GetOneBrandQuery Query = 2;
+}

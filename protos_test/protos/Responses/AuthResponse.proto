@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option csharp_namespace = "Protos";
+
+message AuthResponse {
+	string token = 1;
+	string refreshToken = 2;
+}

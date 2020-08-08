@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option csharp_namespace = "Protos";
+
+message BrandUpdateRequest{
+	string BrandId = 1;
+	string Name = 2;
+	bool IsPublic= 3;
+}

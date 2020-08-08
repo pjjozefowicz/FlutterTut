@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Requests/Queries/PaginationQuery.proto";
+
+option csharp_namespace = "Protos";
+
+message GetAllBrandsQuery {
+	string name = 1;
+	bool isPublic = 2;
+	bool owned = 3;
+	bool withUser = 4;
+	PaginationQuery paginationQuery = 5;
+}
